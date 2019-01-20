@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> {{ product.name }} </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+            <img src="./assets/images/{{product.photo}}" />
+        <ion-card-content>
+            <ion-card-title>
+                {{ product.name }}
+                <ion-chip style="margin-left: 5px;">
+                    <ion-label color="danger">{{product.category.name}}</ion-label>
+                </ion-chip>
+            </ion-card-title>
+        
+            <p [innerHTML]="product.shortDescription"></p>
+            <p [innerHTML]="product.price"></p>
+
+            <button ion-button icon-left block outline color="danger">
+                <ion-icon name="basket"></ion-icon> Ajouter au panier
+            </button>
+
+        </ion-card-content>
+      </ion-card>
+</ion-content>
